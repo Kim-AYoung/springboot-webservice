@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity // 실제 DB의 테이블과 매칭될 클래스
-public class Posts {
+public class Posts extends BaseTimeEntity{
 
     @Id // PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 생성 규칙, IDENTITY : auto_increment
