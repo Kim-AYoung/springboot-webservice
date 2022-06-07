@@ -5,5 +5,6 @@
 - orm : jpa(spring data jpa)
 - db : h2(in-memory-db)
 - template engine : mustache
+- front: bootstrap, jquery
 - test : junit
   
