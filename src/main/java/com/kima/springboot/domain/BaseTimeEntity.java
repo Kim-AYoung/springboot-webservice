@@ -1,4 +1,4 @@
-package com.kima.springboot.domain.posts;
+package com.kima.springboot.domain;
 
 
 import lombok.Getter;
