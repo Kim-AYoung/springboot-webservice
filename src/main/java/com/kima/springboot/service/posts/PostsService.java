@@ -42,4 +42,10 @@ public class PostsService {
                 .map(PostsListResponseDto::new) // 람다식, 다음과 뜻이 같음 .map(posts -> new PostsListResponseDto(posts))
                 .collect(Collectors.toList()); // List로 반환
     }
+
+    @Transactional
+    public void delete(Long id) {
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 게시글이 존재하지 않습니다. id=" + id));
+        postsRepository.delete(posts);
+    }
 }
