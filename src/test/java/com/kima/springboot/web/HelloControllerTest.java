@@ -12,7 +12,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(controllers = HelloController.class) // JPA 기능이 작동하지 않음
+// WebMvcTest의 스캔 대상 O : WebSecurityConfigurerAdapter, WebMvcConfigurer, @ControllerAdvice, @Controller
+// WebMvcTest의 스캔 대상 X : @Service, @Repository, @Component
+@WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {
 
     @Autowired
