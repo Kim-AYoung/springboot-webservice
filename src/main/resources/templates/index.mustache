@@ -11,6 +11,7 @@
                 {{/userName}}
                 {{^userName}}
                     <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a> <!-- '/oauth2/authorization/google' : spring security에서 기본적으로 제공하는 로그인 url, controller 만들 필요 없음 -->
+                    <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a> <!-- application-oauth.properties에 등록한 redirect-uri 값에 맞춰 자동으로 등록됨 -->
                 {{/userName}}
             </div>
         </div>
