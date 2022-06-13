@@ -1,0 +1,23 @@
+language: java
+jdk:
+  - openjdk8
+
+# Travis Ci가 어느 branch가 Push될 때 실행할 것인지
+branches:
+  only:
+    - master
+
+# Travis CI Server's Home
+cache: # gradle을 통해 의존성을 받게 되면, 이를 해당 directory에 cache하여 같은 의존성은 다음 배포 때 다시 받지 않도록 설정
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+
+# Commands to perform when pushed to the brach
+script: "./gradlew clean build"
+
+# Alarm by mail when CI execution is complete
+notifications:
+  email:
+    recipients:
+      - onionlily123@naver.com
