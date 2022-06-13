@@ -8,4 +8,5 @@
 - front: bootstrap, jquery
 - test : junit5
 - deploy : aws EC2
+- CI : Travis CI
   
