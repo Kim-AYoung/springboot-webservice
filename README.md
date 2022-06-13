@@ -3,8 +3,9 @@
 ## skill set
 - spring boot
 - orm : jpa(spring data jpa)
-- db : h2(in-memory-db)
+- db : aws RDS(mariadb)
 - template engine : mustache
 - front: bootstrap, jquery
-- test : junit
+- test : junit5
+- deploy : aws EC2
   
