@@ -4,3 +4,4 @@ build
 
 # for security
 application-oauth.properties
+application-real-db.properties
