@@ -47,7 +47,6 @@ deploy:
     region: ap-northeast-2
     wait-until-deployed: true
 
-
 # Alarm by mail when CI execution is complete
 notifications:
   email:
