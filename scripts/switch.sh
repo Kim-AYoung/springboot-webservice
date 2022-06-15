@@ -13,6 +13,6 @@ function switch_proxy() {
     echo "> Port 전환"
     echo "set \$service_url http://127.0.0.1:${IDLE_PORT};" | sudo tee /etc/nginx/conf.d/service-url.inc # service_url 덮어쓰기
 
-    echo "> 엔진엑스 Reload"
+    echo "> Nginx Reload"
     sudo service nginx reload # Nginx 설정을 다시 불러옴, 끊기는 현상 없음, 중요한 설정은 restart 사용
 }
