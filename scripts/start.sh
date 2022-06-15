@@ -1,4 +1,4 @@
-# 배포할 신규 버전 스프링 부트 프로젝트를 stop.sh로 종료한 'profile'로 실행
+# 배포할 신규 버전 스프링 부트 프로젝트를 'stop.sh'에서 종료한 profile로 실행
 
 #!/usr/bin/env bash
 

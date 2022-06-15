@@ -2,8 +2,8 @@
 
 #!/usr/bin/env bash
 
-ABSPATH=$(readlink -f $0)
-ABSDIR=$(dirname $ABSPATH) # 현재 stop.sh가 속해 있는 경로 찾기
+ABSPATH=$(readlink -f $0) # 현재 stop.sh가 속해 있는 경로 찾기
+ABSDIR=$(dirname $ABSPATH) # 해당 경로에서 diretory가 아닌 접미사는 제거하기
 source ${ABSDIR}/profile.sh # import
 
 IDLE_PORT=$(find_idle_port)
