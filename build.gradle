@@ -1,5 +1,6 @@
 import java.text.SimpleDateFormat
 
+// project plugins 관리
 buildscript {
     ext { // 'build.gradle'에서 사용하는 전역변수
         springBootVersion = '2.1.7.RELEASE'
@@ -21,19 +22,18 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group 'com.kima'
-
 String dateFormat = "yyyyMMddHHmmss";
 SimpleDateFormat df = new SimpleDateFormat(dateFormat);
 Date date = new Date();
 TimeZone tz = TimeZone.getTimeZone("Asia/Seoul");
 df.setTimeZone(tz);
-version '1.0.1-SNAPSHOT-' +df.format(date)
+version '1.0.1-SNAPSHOT-' + df.format(date)
 sourceCompatibility = 1.8
 
 // 각종 의존성들을 어떤 원격 저장소에서 받을지 결정
 repositories {
     mavenCentral()
-    jcenter()
+    jcenter() // 라이브러리 업로드가 더 쉬움
 }
 
 dependencies {
