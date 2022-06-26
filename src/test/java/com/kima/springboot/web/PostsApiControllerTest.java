@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = RANDOM_PORT) // JPA 기능까지 한번에 테스트 할 때 사용
+@SpringBootTest(webEnvironment = RANDOM_PORT)
 public class PostsApiControllerTest {
 
     @LocalServerPort

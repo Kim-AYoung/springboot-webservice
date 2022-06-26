@@ -26,6 +26,7 @@ public class PostsRepositoryTest {
 
     @Test
     public void getPostsList() {
+        //given
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
@@ -35,8 +36,10 @@ public class PostsRepositoryTest {
                 .author("onionlily123@naver.com")
                 .build());
 
+        //when
         List<Posts> postsList = postsRepository.findAll();
 
+        //then
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);

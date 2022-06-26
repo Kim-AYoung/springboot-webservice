@@ -16,8 +16,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
-// WebMvcTest의 스캔 대상 O : WebSecurityConfigurerAdapter, WebMvcConfigurer, @ControllerAdvice, @Controller
-// WebMvcTest의 스캔 대상 X : @Service, @Repository, @Component
 @WebMvcTest(controllers = HelloController.class,
             excludeFilters = { // 스캔 대상에서 SecurityConfig 제거
                     @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)
